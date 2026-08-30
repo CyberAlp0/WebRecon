@@ -1,0 +1,10 @@
+# reports / scratch output
+*.json
+*.gnmap
+*.nmap
+scan*
+report*
+# editor / OS noise
+*.swp
+*~
+.DS_Store
