@@ -1,0 +1,56 @@
+name: Bug report
+description: WebRecon crashed, hung, or reported something wrong
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Redact real engagement data.** Anything you paste here is public
+        forever. Replace client IPs, hostnames and certificate SANs with lab
+        values or placeholders. HTB/THM/your-own-lab output is fine as-is.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did WebRecon do, and what did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command you ran
+      placeholder: ./webrecon.sh -t 10.10.10.10 -p 80,443 --quiet
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Paste the relevant output. Redact first.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: WebRecon version
+      description: Output of ./webrecon.sh -V
+      placeholder: webrecon.sh v1.1.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS and bash version
+      placeholder: Kali 2025.2, bash 5.2.21
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I have redacted any real client or engagement data
+          required: true
+        - label: I am testing a system I own or have written permission to test
+          required: true

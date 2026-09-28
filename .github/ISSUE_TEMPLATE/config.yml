@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Usage and examples
+    url: https://github.com/CyberAlp0/WebRecon#usage
+    about: Check the usage and examples in the README before opening an issue.
+  - name: Contributing guide
+    url: https://github.com/CyberAlp0/WebRecon/blob/main/CONTRIBUTING.md
+    about: How to add a fingerprint, what is in scope, and how to test a change.

@@ -2,6 +2,12 @@
 
 # WebRecon
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-58A6FF?style=flat-square)](LICENSE)
+![Version](https://img.shields.io/badge/version-1.1.0-3FB950?style=flat-square)
+![Shell: bash 4+](https://img.shields.io/badge/shell-bash%204%2B-D6B260?style=flat-square)
+![Platform: Linux](https://img.shields.io/badge/platform-Linux-8B949E?style=flat-square)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-58A6FF?style=flat-square)](CONTRIBUTING.md)
+
 **Fast web-interface discovery & fingerprinting for penetration testing and CTFs.**
 
 `WebRecon` takes a target and a list of ports, then tells you — quickly and
@@ -178,13 +184,15 @@ Contributions welcome — see below.
 
 ## Contributing
 
-1. Fork the repo and create a feature branch.
-2. Keep it dependency-light (POSIX-ish `bash` + `curl` where possible).
-3. Test against a few real services and add a note in the PR.
-4. Open a pull request describing the change.
+Contributions are welcome — especially new technology fingerprints, which are
+usually a one-line addition to the map in `probe_url()`.
 
-The technology-fingerprint map in `probe_url()` is intentionally easy to extend —
-adding a new stack is usually a one-line `grep`.
+Read **[CONTRIBUTING.md](CONTRIBUTING.md)** first: it covers what is in scope,
+the dependency-light rule, how to add a fingerprint, and how to test a change
+before opening a PR.
+
+> Redact real client IPs, hostnames and certificate SANs from anything you paste
+> into an issue or PR. Lab output (HTB, THM, your own box) is fine as-is.
 
 ---
 

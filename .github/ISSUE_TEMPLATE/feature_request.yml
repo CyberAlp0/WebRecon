@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest an improvement to the triage step
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        WebRecon deliberately owns one step: deciding which ports serve a web
+        interface and what is behind them. Requests to add port scanning,
+        directory brute-forcing or exploitation are usually out of scope — see
+        [CONTRIBUTING.md](https://github.com/CyberAlp0/WebRecon/blob/main/CONTRIBUTING.md).
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is awkward today
+      description: Describe the problem, not just the solution you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like instead
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: This keeps WebRecon within its web-triage scope
+          required: true
+        - label: This does not add a heavy new dependency

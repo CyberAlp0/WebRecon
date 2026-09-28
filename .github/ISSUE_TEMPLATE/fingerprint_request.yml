@@ -1,0 +1,44 @@
+name: Technology fingerprint
+description: WebRecon did not recognise a stack, or guessed it wrong
+labels: ["fingerprint"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fingerprints are usually a one-line addition to the map in
+        `probe_url()`. If you can open a PR, even better — see
+        [CONTRIBUTING.md](https://github.com/CyberAlp0/WebRecon/blob/main/CONTRIBUTING.md).
+
+        **Redact real engagement data** before pasting anything below.
+  - type: input
+    id: technology
+    attributes:
+      label: Technology
+      placeholder: Apache Superset
+    validations:
+      required: true
+  - type: input
+    id: reported
+    attributes:
+      label: What WebRecon reported
+      description: The "Tech guess" line, or "none" if it did not guess.
+      placeholder: none
+    validations:
+      required: true
+  - type: textarea
+    id: signature
+    attributes:
+      label: Identifying headers or body markers
+      description: >
+        Server / X-Powered-By headers, page title, or a distinctive string in
+        the body that reliably identifies this stack.
+      render: text
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I have redacted any real client or engagement data
+          required: true
