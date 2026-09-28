@@ -68,7 +68,7 @@ ${C_BOLD}EXAMPLES${C_RESET}
 
 ${C_BOLD}NOTE${C_RESET}
   Authorized testing only. See README for the full workflow
-  (nmap -> webrecon -> whatweb) and how it fits together.
+  (nmap -> WebRecon -> whatweb) and how it fits together.
 EOF
 }
 
@@ -286,7 +286,7 @@ main() {
 
   if [[ "$QUIET" -eq 0 ]]; then
     echo "${C_BOLD}=========================================================${C_RESET}"
-    echo "${C_BOLD} webrecon v$VERSION — $target${C_RESET}"
+    echo "${C_BOLD} WebRecon v$VERSION — $target${C_RESET}"
     echo " ${C_DIM}$(date)${C_RESET}"
     echo " Ports: $ports"
     echo "${C_BOLD}=========================================================${C_RESET}"

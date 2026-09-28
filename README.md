@@ -1,14 +1,14 @@
-# webrecon
+# WebRecon
 
 **Fast web-interface discovery & fingerprinting for penetration testing and CTFs.**
 
-`webrecon` takes a target and a list of ports, then tells you — quickly and
+`WebRecon` takes a target and a list of ports, then tells you — quickly and
 readably — which ports are actually serving **web interfaces** (HTTP/HTTPS) and
 what technology sits behind each one. It's the fast triage step between a port
 scan and deep web enumeration.
 
 ```
-nmap  ──►  webrecon  ──►  whatweb / browser / gobuster
+nmap  ──►  WebRecon  ──►  whatweb / browser / gobuster
 (what's    (which ports    (deep-dive the
  open?)     are web?)       web apps that matter)
 ```
@@ -22,12 +22,12 @@ After an `nmap` scan you're often staring at a list of open ports — `80`, `443
 browser, and what are they running?"* Doing that by hand with `curl` for every
 port, over both HTTP and HTTPS, gets tedious fast.
 
-`webrecon` automates exactly that check and prints a clean, per-port report:
+`WebRecon` automates exactly that check and prints a clean, per-port report:
 status code, server software, page title, redirects, required auth, and a
 best-effort technology guess.
 
-> **Scope:** `webrecon` is a *web-triage* tool, not a replacement for `nmap`.
-> `nmap` is authoritative for identifying *any* service; `webrecon` is sharper and
+> **Scope:** `WebRecon` is a *web-triage* tool, not a replacement for `nmap`.
+> `nmap` is authoritative for identifying *any* service; `WebRecon` is sharper and
 > more readable once you specifically care about the web ones. Use them together.
 
 ---
@@ -52,8 +52,8 @@ best-effort technology guess.
 ## Installation
 
 ```bash
-git clone https://github.com/<your-user>/webrecon.git
-cd webrecon
+git clone https://github.com/CyberAlp0/WebRecon.git
+cd WebRecon
 chmod +x webrecon.sh
 ```
 
@@ -119,7 +119,7 @@ nmap -Pn -p- --min-rate 3000 -oG scan.gnmap 10.129.56.249
 
 ```text
 =========================================================
- webrecon v1.0.0 — 10.129.56.249
+ WebRecon v1.1.0 — 10.129.56.249
  Ports: 80,443,6600
 =========================================================
 
@@ -150,7 +150,7 @@ nmap -Pn -p- --min-rate 3000 -oG scan.gnmap 10.129.56.249
    ```bash
    nmap -Pn -p- --min-rate 3000 -oG scan.gnmap <target>
    ```
-2. **Triage the web surface** with `webrecon` — fast yes/no + summary per port.
+2. **Triage the web surface** with `WebRecon` — fast yes/no + summary per port.
 3. **Deep-fingerprint** the interesting hits with a specialist tool:
    ```bash
    whatweb -a3 https://<target>:<port>
@@ -158,7 +158,7 @@ nmap -Pn -p- --min-rate 3000 -oG scan.gnmap 10.129.56.249
 4. **Enumerate** the app (directories, vhosts, params) with `ffuf`/`gobuster`,
    or open it in a browser through Burp.
 
-`webrecon` deliberately owns step 2 only, and does it well.
+`WebRecon` deliberately owns step 2 only, and does it well.
 
 ---
 
@@ -188,7 +188,7 @@ adding a new stack is usually a one-line `grep`.
 
 ## Legal & ethical use
 
-`webrecon` is provided for **authorized security testing and education only**
+`WebRecon` is provided for **authorized security testing and education only**
 (your own systems, deliberately vulnerable labs, or targets you have **explicit
 written permission** to test — e.g. Hack The Box, TryHackMe, a signed engagement).
 
