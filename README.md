@@ -1,3 +1,5 @@
+![WebRecon — fast web-interface discovery and fingerprinting for pentesting and CTFs](assets/preview.png)
+
 # WebRecon
 
 **Fast web-interface discovery & fingerprinting for penetration testing and CTFs.**
